@@ -3,9 +3,9 @@ module Main where
 
 import           Test.Framework
 import           Test.Framework.Providers.HUnit
-import           Test.Framework.Providers.QuickCheck2
+-- import           Test.Framework.Providers.QuickCheck2
 import           Test.HUnit hiding (Test)
-import           Test.QuickCheck
+-- import           Test.QuickCheck
 
 import           Math.RPN
 
@@ -20,5 +20,5 @@ testMultiply :: Test
 testMultiply = testCase "Multiplication" $ do
     assertEqual "Multiply 3 and 6" result shouldBe
   where
-    result = 3
-    shouldBe = 18
+    result = solveRPN "3 6 *"
+    shouldBe = 18.0
