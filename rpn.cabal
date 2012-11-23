@@ -1,0 +1,44 @@
+name:               rpn
+version:            0.1
+author:             Will Langstroth <will@langstroth.com>
+maintainer:         Will Langstroth <will@langstroth.com>
+license:            BSD3
+homepage:           http://github.com/wlangstroth/rpn
+synopsis:           Demo layout for a Haskell project
+description:
+  A simple command line "reverse Polish notation" calculator to demonstrate a
+  Haskell project layout
+
+category:           Math
+build-type:         Simple
+cabal-version:      >= 1.12
+
+executable rpn
+  default-language: Haskell2010
+  main-is: Main.hs
+  hs-source-dirs:   src
+  build-depends:
+    base,
+    rpn
+
+library
+  default-language: Haskell2010
+  hs-source-dirs:   src
+  build-depends:
+    base
+  exposed-modules:
+    Math.RPN
+
+test-suite tests
+  default-language: Haskell2010
+  type:             exitcode-stdio-1.0
+  hs-source-dirs:   tests
+  main-is:          Main.hs
+  build-depends:
+    base,
+    HUnit,
+    QuickCheck,
+    rpn,
+    test-framework,
+    test-framework-hunit,
+    test-framework-quickcheck2
