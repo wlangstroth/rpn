@@ -1,7 +1,9 @@
+version := $(shell awk '/^Version:/{print $$2}' ../$(package).cabal)
+
 all: configure build test
 
 configure:
-	cabal configure --enable-tests --enable-library-coverage --enable-benchmarks
+	cabal configure --enable-tests --enable-library-coverage
 
 build:
 	cabal build
