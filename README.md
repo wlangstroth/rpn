@@ -1,10 +1,13 @@
 # rpn
 
-A demo project layout for Haskell.
+A demo layout for Haskell projects.
 
     Makefile
     ├── README.md
     ├── benchmarks
+    │   ├── Main.hs
+    │   └── Math
+    │       └── RPN.hs
     ├── rpn.cabal
     ├── src
     │   ├── Main.hs
@@ -15,9 +18,6 @@ A demo project layout for Haskell.
         └── Math
             └── RPN.hs
 
-This layout, Makefile and cabal file set up a development context for a simple
-haskell project.
-
 # Usage
 
-The Makefile 
+Check out the Makefile.
