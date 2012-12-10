@@ -36,8 +36,8 @@ test-suite tests
   main-is:          Main.hs
   build-depends:
     base,
-    HUnit,
-    QuickCheck,
+    HUnit           == 1.2.*,
+    QuickCheck      == 2.4.2,
     rpn,
     test-framework,
     test-framework-hunit,
