@@ -1,4 +1,4 @@
-version := $(shell awk '/^Version:/{print $$2}' ../$(package).cabal)
+version := $(shell awk '/^version:/{print $$2}' ../$(package).cabal)
 
 all: configure build test
 
