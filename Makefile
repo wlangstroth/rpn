@@ -1,4 +1,5 @@
-version := $(shell awk '/^version:/{print $$2}' ../$(package).cabal)
+package := 'rpn'
+version := $(shell awk '/^version:/{print $$2}' $(package).cabal)
 
 all: configure build test
 
