@@ -18,38 +18,39 @@ tests = [ testMultiplication
         , testAddition
         , testSubtraction
         , testDivision
+        , testSum
         ]
 
 testMultiplication :: Test
-testMultiplication = testCase "Multiplication" $ do
+testMultiplication = testCase "Multiplication" $
     assertEqual "'3 6 *' should equal 18" result shouldBe
   where
     result = solveRPN "3 6 *"
     shouldBe = 18.0
 
 testAddition :: Test
-testAddition = testCase "Addition" $ do
+testAddition = testCase "Addition" $
     assertEqual "'3 6 +' should equal 9" result shouldBe
   where
     result = solveRPN "3 6 +"
     shouldBe = 9.0
 
 testSubtraction :: Test
-testSubtraction = testCase "Subtraction" $ do
+testSubtraction = testCase "Subtraction" $
     assertEqual "'3 6 -' should equal -3" result shouldBe
   where
     result = solveRPN "3 6 -"
     shouldBe = -3.0
 
 testDivision :: Test
-testDivision = testCase "Division" $ do
+testDivision = testCase "Division" $
     assertEqual "'6 2 /' should equal 3" result shouldBe
   where
     result = solveRPN "6 2 /"
     shouldBe = 3.0
 
-testDivision :: Test
-testDivision = testCase "Sum" $ do
+testSum :: Test
+testSum = testCase "Sum" $
     assertEqual "'3 2 6 2 sum' should equal 13" result shouldBe
   where
     result = solveRPN "3 2 6 2 sum"
